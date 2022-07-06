@@ -92,13 +92,6 @@
                                             <li><a href="index.jsp">主页</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="services.html">科室 +</a>
-                                        <ul class="submenu">
-                                            <li><a href="services.html">服务 01</a></li>
-                                            <li><a href="services-2.html">服务 02</a></li>
-                                            <li><a href="services-details.html">了解更多</a></li>
-                                        </ul>
-                                    </li>
                                     <li><a href="doctor.jsp">医生 +</a>
                                         <ul class="submenu">
                                             <li><a href="doctor.jsp">医生</a></li>
@@ -109,11 +102,6 @@
                                         <ul class="submenu">
                                             <li><a href="login.jsp">登录</a></li>
                                             <li><a href="register.jsp">注册</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">资讯 +</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog-details-gallery.html">细节画廊</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">黄页 +</a>
