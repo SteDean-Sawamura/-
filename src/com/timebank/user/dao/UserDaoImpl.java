@@ -4,12 +4,6 @@ import org.springframework.stereotype.Repository;
 import com.timebank.entity.User;
 import com.timebank.framework.BaseDao;
 
-/**
-* @author 程文秀
-* @version 创建时间：2019年5月29日 下午2:54:44
-* @ClassName 类名称
-* @Description 类描述
-*/
 @Repository
 public class UserDaoImpl extends BaseDao<User, Integer> {
 

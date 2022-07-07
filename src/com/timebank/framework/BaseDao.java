@@ -15,8 +15,6 @@ import org.hibernate.SQLQuery;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.CriteriaSpecification;
 
-
-
 public abstract class BaseDao<T,PK extends Serializable> {
 	
 	private Class<T> entityClass;
@@ -71,29 +69,12 @@ public abstract class BaseDao<T,PK extends Serializable> {
 		}
 		return (T)query.uniqueResult();
 	}
-	/**
-	 * 
-	 * @desc 查询全部数据
-	 * @author wangwei
-	 * @createDate 2014年9月5日
-	 * @return
-	 * @throws Exception
-	 */
+	
     public List<T> findAll() throws Exception {
 		Query query=this.sessionFactory.getCurrentSession().createQuery("from "+entityClass.getSimpleName());
 		return query.list();
 	}
 	
-    /**
-     * 
-     * @desc 按条件查询数据
-     * @author wangwei
-     * @createDate 2014年9月5日
-     * @param hql
-     * @param params
-     * @return
-     * @throws Exception
-     */
     public List<T> findByProperty(String hql, Object[] params) throws Exception {
 		Query query=this.sessionFactory.getCurrentSession().createQuery(hql);
 		if(params!=null && params.length>0){
@@ -103,29 +84,11 @@ public abstract class BaseDao<T,PK extends Serializable> {
 		return query.list();
 	}
 	
-    /**
-     * 
-     * @desc 统计全部数据数量
-     * @author wangwei
-     * @createDate 2014年9月5日
-     * @return
-     * @throws Exception
-     */
     public Long findCount4Page() throws Exception {
 		Query query=this.sessionFactory.getCurrentSession().createQuery("select count("+entityClass.getSimpleName()+"from "+entityClass.getSimpleName());
 		return (Long)query.uniqueResult();
 	}
 	
-    /**
-     * 
-     * @desc 分页查询全部数据
-     * @author wangwei
-     * @createDate 2014年9月5日
-     * @param pageNum
-     * @param pageSize
-     * @return
-     * @throws Exception
-     */
     public List<T> find4Page(int pageNum, int pageSize) throws Exception {
 		Query query=this.sessionFactory.getCurrentSession().createQuery("from "+entityClass.getSimpleName());
 		query.setFirstResult((pageNum-1)*pageSize);
@@ -133,16 +96,6 @@ public abstract class BaseDao<T,PK extends Serializable> {
 		return query.list();
 	}
 	
-    /**
-     * 
-     * @desc 按条件查询数据数量
-     * @author wangwei
-     * @createDate 2014年9月5日
-     * @param hql
-     * @param params
-     * @return
-     * @throws Exception
-     */
     public Long findCount4PageByProperty(String hql, Object[] params) throws Exception {
 		Query query=this.sessionFactory.getCurrentSession().createQuery(hql);
 		if(params!=null && params.length>0){
@@ -152,18 +105,6 @@ public abstract class BaseDao<T,PK extends Serializable> {
 		return (Long)query.uniqueResult();
 	}
 	
-    /**
-     * 
-     * @desc 按条件分页查询数据
-     * @author wangwei
-     * @createDate 2014年9月5日
-     * @param pageNum
-     * @param pageSize
-     * @param hql
-     * @param params
-     * @return
-     * @throws Exception
-     */
     public List<T> find4PageByProperty(int pageNum, int pageSize, String hql, Object[] params) throws Exception {
 		Query query=this.sessionFactory.getCurrentSession().createQuery(hql);
 		if(params!=null && params.length>0){
@@ -250,16 +191,7 @@ public abstract class BaseDao<T,PK extends Serializable> {
         List<Map<String, Object>> list = query.list();
         return list;
     }
-    /**
-     * 
-     * @desc 分页原生SQL进行统计数量
-     * @author wangwei
-     * @createDate 2014年10月13日
-     * @param sql
-     * @param params
-     * @return
-     * @throws Exception
-     */
+    
     public Long findCount4PageBySql(String sql,Object[] params) throws Exception {
     	SQLQuery query=this.sessionFactory.getCurrentSession().createSQLQuery(sql);
 		if(params!=null && params.length>0){
@@ -281,18 +213,7 @@ public abstract class BaseDao<T,PK extends Serializable> {
         }
         return Long.parseLong(query.uniqueResult().toString());
     }
-    /**
-     * 
-     * @desc 分页原生SQL进行查询
-     * @author wangwei
-     * @createDate 2014年9月5日
-     * @param sql
-     * @param params
-     * @param pageNum
-     * @param pageSize
-     * @return
-     * @throws Exception
-     */
+    
     public List<Map<String, Object>> find4PageBySql(String sql,Object[] params,int pageNum,int pageSize) throws Exception {
         SQLQuery query = sessionFactory.getCurrentSession().createSQLQuery(sql);
         query.setResultTransformer(CriteriaSpecification.ALIAS_TO_ENTITY_MAP);

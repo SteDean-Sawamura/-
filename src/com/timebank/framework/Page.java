@@ -2,16 +2,6 @@ package com.timebank.framework;
 
 import java.util.List;
 
-/**
- * 
- * Description: <br />
- * Project: abc <br />
- * ClassName: Page <br />
- * @author wangwei
- * @version 1.0 2014年10月21日下午3:11:27
- *
- * @param <T>
- */
 public class Page<T> {
 	private List<T> list;
 	private int currentPageNum;

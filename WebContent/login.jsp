@@ -100,16 +100,10 @@
                                             <li><a href="doctor-details.jsp">了解更多</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="shop.html">用户</a>
+                                    <li><a href="#">用户 +</a>
                                         <ul class="submenu">
                                             <li><a href="login.jsp">登录</a></li>
                                             <li><a href="register.jsp">注册</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">黄页 +</a>
-                                        <ul class="submenu">
-                                            <li><a href="appoinmenture.jsp">预约简介</a></li>
-                                            <li><a href="appoinmenture.jsp">预约</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -163,7 +157,7 @@
                            
 							<div style="color:red">${message }</div>
 							
-                            <form action="${pageContext.request.contextPath}/indexlogin.jsp">
+                            <form action="${pageContext.request.contextPath}/user/login">
                                 <label for="name">电话号码 <span>**</span></label>
                                 <input id="name" type="text" name="phone" placeholder="Enter phone number..." />
                                 <label for="pass">密码 <span>**</span></label>

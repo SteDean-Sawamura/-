@@ -161,7 +161,7 @@
                                             <li><a href="doctor-details.jsp">了解更多</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="shop.html">用户</a>
+                                    <li><a href="#">用户 +</a>
                                         <ul class="submenu">
                                             <li><a href="login.jsp">登录</a></li>
                                             <li><a href="register.jsp">注册</a></li>
@@ -170,7 +170,7 @@
                                     <li><a href="#">黄页 +</a>
                                         <ul class="submenu">
                                             <li><a href="appoinmenture.jsp">预约简介</a></li>
-                                            <li><a href="appoinmenture.jsp">预约</a></li>
+                                            <li><a href="appoinmenture2.jsp">预约</a></li>
                                         </ul>
                                     </li>
                                 </ul>

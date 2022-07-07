@@ -97,16 +97,10 @@
                                             <li><a href="doctor-details.jsp">了解更多</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="shop.html">用户</a>
+                                    <li><a href="#">用户 +</a>
                                         <ul class="submenu">
                                             <li><a href="login.jsp">登录</a></li>
                                             <li><a href="register.jsp">注册</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">黄页 +</a>
-                                        <ul class="submenu">
-                                            <li><a href="appoinmenture.jsp">预约简介</a></li>
-                                            <li><a href="appoinmenture.jsp">预约</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -160,11 +154,11 @@
                             <h3 class="text-center mb-60">这里注册</h3>
                             <div style="color:red">${register_message }</div>
                             <form action="${pageContext.request.contextPath}/user/regist">
-                                <label for="name">用户名 <span>**</span></label>
+                                <label for="name">用户名 <span>*</span></label>
                                 <input id="name" type="text" name="username" placeholder="Enter Username..." />
-                                <label for="email-id">电话号码<span>**</span></label>
-                                <input id="email-id" type="text" name="phonenumber" placeholder="Enter Phone Number" />
-                                <label for="pass">密码 <span>**</span></label>
+                                <label for="email-id">电话号码<span>*</span></label>
+                                <input id="email-id" type="text" name="phonenumber" placeholder="Enter Phone Number" onchange="my()"/>
+                                <label for="pass">密码 <span>*</span></label>
                                 <input id="pass" type="password" name="pwd" placeholder="Enter password..." />
                                 <div class="mt-10"></div>
                                 <button class="btn theme-btn-2 w-100" type="submit">现在注册</button>
@@ -178,6 +172,14 @@
         </section>
         <!-- login Area End-->
     </main>
+    
+    <script>
+    	function my(){
+    		if (document.getElementById('email-id').value.length!=11){
+    			alert('电话号码必须为十一位！');
+    		}
+    	}
+    </script>
 
     <!-- footer start -->
     <footer>

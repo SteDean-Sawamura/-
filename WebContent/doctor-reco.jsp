@@ -120,7 +120,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-5 d-flex align-items-center">
                         <div class="logo logo-circle pos-rel">
-                            <a href="index.jsp"><img src="${pageContext.request.contextPath}/img/logo/logo.png" alt=""></a>
+                            <a href="indexlogin.jsp"><img src="${pageContext.request.contextPath}/img/logo/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9">
@@ -161,7 +161,7 @@
                                             <li><a href="doctor-details.jsp">了解更多</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="shop.html">用户</a>
+                                    <li><a href="#">用户 +</a>
                                         <ul class="submenu">
                                             <li><a href="login.jsp">登录</a></li>
                                             <li><a href="register.jsp">注册</a></li>
@@ -170,7 +170,7 @@
                                     <li><a href="#">黄页 +</a>
                                         <ul class="submenu">
                                             <li><a href="appoinmenture.jsp">预约简介</a></li>
-                                            <li><a href="appoinmenture.jsp">预约</a></li>
+                                            <li><a href="appoinmenture2.jsp">预约</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -257,7 +257,7 @@
                 
                   <div class="pagenation">
 						<!--分页-->
-		    			<div id="page" class="page_div">aaa</div>
+		    			<div id="page" class="page_div"></div>
     				</div>
         </section>
         <!-- team-area end -->

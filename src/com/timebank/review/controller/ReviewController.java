@@ -24,12 +24,6 @@ import com.timebank.entity.Review;
 import com.timebank.framework.Page;
 import com.timebank.review.service.ReviewServiceImpl;
 
-/**
-* @author 程文秀
-* @version 创建时间：2019年5月29日 下午2:54:12
-* @ClassName 类名称
-* @Description 类描述
-*/
 @Controller
 @RequestMapping("/review")
 public class ReviewController {
