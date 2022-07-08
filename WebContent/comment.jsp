@@ -87,9 +87,9 @@
                         <div class="header__menu f-right">
                             <nav id="mobile-menu">
                                 <ul>
-                                    <li><a href="index.jsp">主页 +</a>
+                                    <li><a href="indexlogin.jsp">主页 +</a>
                                         <ul class="submenu">
-                                            <li><a href="index.jsp">主页</a></li>
+                                            <li><a href="indexlogin.jsp">主页</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="doctor.jsp">医生 +</a>

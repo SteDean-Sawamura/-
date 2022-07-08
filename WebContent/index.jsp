@@ -42,11 +42,6 @@
                             <span><i class="fas fa-envelope"></i> info@example.com</span>
                         </div>
                     </div>
-                 <!--     <div style="width:300px;height:30px;">
-                      	<input type="text" class="input_text fl" class="btn" id="findgoodsinfo" placeholder="搜索...">
-						<input type="button" class="input_btn fr" class="btn" id="findgoods" value="搜索">
-					
-                    </div> -->
                     <div class="col-xl-5 col-lg-5 col-md-4">
                     	 <c:choose>
 							<c:when test="${!empty sessionScope.user }">
@@ -58,11 +53,6 @@
                         		<div class="header-top-right-btn f-right">
                         			<a href="${pageContext.request.contextPath}/user/logout"  class="btn">退出登录</a> 
                         		</div>
-								<%-- <div class="login_info fl">"C:/Users/win10/Desktop/找图片(1)"
-									欢迎您：<em>${sessionScope.user.uName }</em>
-									<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									<a href="${pageContext.request.contextPath}/user/logout">退出登录</a> 
-								</div> --%>
 							</c:when>
 							<c:otherwise>
 								<div class="header-top-right-btn f-right">
